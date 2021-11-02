@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
+
 {% block content %}
 
-    <form action="" method="GET">
-        {{ my_variable }}
+    <div id="output">
+        <div id="name" class="container">
+            {{my_variable}}
+        </div>
+        <div id="category" class="container"></div>
+        <div id="difficulty" class="container"></div>
+        <div id="description" class="container"></div>
+    </div>
+    <div style="clear:both;"></div>
+    <div id="rand-btn">
+        <form action="" method="GET">
+            <input type="submit" id="btn" name="btn" value="Give me an idea!" input>
+        </form>
+    </div>
 
-        <input type="submit" id="btn" name="btn" value="Give me an idea!" /input>
-    </form>
 {% endblock content %}
 

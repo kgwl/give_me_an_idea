@@ -1,7 +1,5 @@
 from django.shortcuts import render
-
-
-# Create your views here.
+from .models import Idea
 
 def index_view(request):
     context = {

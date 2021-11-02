@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Give me an idea!</title>
 
-    <title>Give me and idea!</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
+
 </head>
     <body>
+    <div id="page">
+        <div id="web-title">Give me an idea!</div>
+            {% block content %}
 
-        {% block content %}
-
-        {% endblock content %}
+            {% endblock content %}
+    </div>
     </body>
 </html>
