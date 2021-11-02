@@ -7,3 +7,4 @@ class Idea(models.Model):
     category = models.CharField(max_length=200,default='default')
     difficulty = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
+    language_category = models.IntegerField()
