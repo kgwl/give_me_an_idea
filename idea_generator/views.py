@@ -9,7 +9,6 @@ def index_view(request):
         'category':'',
         'difficulty':'',
         'description':'',
-        'language':''
     }
 
     if request.GET.get('btn'):
@@ -17,9 +16,8 @@ def index_view(request):
         idea = Idea.objects.get(id=select_id)
 
         context['name'] = idea.name
-        context['category'] = idea.category
+        context['category'] = idea.category.category
         context['difficulty'] = idea.difficulty
-        context['language'] = idea.language_category
         context['description'] = idea.description
 
 
