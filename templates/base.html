@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>Give me an idea!</title>
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
 
 </head>
-    <body>
-    <div id="page">
-        <div id="web-title">Give me an idea!</div>
-            {% block content %}
+<body>
+<div id="page">
+    <div id="web-title">Give me an idea!</div>
+    {% block content %}
 
-            {% endblock content %}
-    </div>
-    </body>
+    {% endblock content %}
+</div>
+</body>
 </html>

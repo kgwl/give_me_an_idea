@@ -1,36 +1,67 @@
-#page{
-    width:1080px;
-    margin-left:auto;
-    margin-right:auto;
+body{
+    background-color: #FFFBE6;
 }
 
-#web-title{
-    width:1080px;
-    maring:20px;
-    font-size:70px;
-    text-align:center;
-    margin-bottom:125px;
-}
-/*#3095d3*/
-.container{
-    margin:20px;
-    width:230px;
-    height:142px;
-    background-color:#3095d3;
-    float:left;
-    text-align:center;
-    font-size:26px;
+#page {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #050649;
 }
 
-.container:hover{
-    background-color:#52b7f5;
+#web-title {
+    width: 1240px;
+    maring: 20px;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 125px;
+    margin-top: 18px;
 }
 
-#rand-btn{
-    width:1120px;
-    text-align:center;
+#output{
+    width: 1200px;
+    min-height: 185px;
+    border: 5px solid #A1B6E2;
 }
 
-.container-header{
-    font-size:16px;
+.container {
+    width: 300px;
+    height: 185px;
+    background-color: #B9C9ED;
+    float: left;
+    text-align: center;
+    font-size: 26px;
+
+}
+
+.container:hover {
+    background-color: #CFDCF5;
+}
+
+#rand-btn {
+    margin-top:25px;
+    width: 1240px;
+    text-align: center;
+}
+
+#btn {
+    width: 100px;
+    height: 61px;
+    font-size: 28px;
+    background-color: #FFD8C0;
+    border: 3px solid #FFCCAD;
+    border-radius: 5px;
+    color: #050649;
+}
+
+#btn:hover {
+    background-color: #FFE4D3;
+}
+
+#btn:active {
+    background-color: #FFC19A;
+}
+
+.container-header {
+    font-size: 16px;
 }

@@ -3,12 +3,11 @@ from .models import Idea
 import random
 
 def index_view(request):
-
     context = {
-        'name' : '',
-        'category':'',
-        'difficulty':'',
-        'description':'',
+        'name': '',
+        'category': '',
+        'difficulty': '',
+        'description': ''
     }
 
     if request.GET.get('btn'):
@@ -20,5 +19,4 @@ def index_view(request):
         context['difficulty'] = idea.difficulty
         context['description'] = idea.description
 
-
-    return render(request,'main.html',context)
+    return render(request, 'main.html', context)
