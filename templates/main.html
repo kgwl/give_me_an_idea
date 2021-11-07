@@ -1,25 +1,30 @@
 {% extends 'base.html' %}
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
 
 {% block content %}
 
     <div id="output">
+
+        <h2 class="container-header">Name</h2>
+        <h2 class="container-header">Category</h2>
+        <h2 class="container-header">Difficulty</h2>
+        <h2 class="container-header">Description</h2>
+
+        <div style="clear:both;"></div>
+
         <div id="name" class="container">
-            <h2 class="container-header">Name</h2>
             {{ name }}
         </div>
+
         <div id="category" class="container">
-            <h2 class="container-header">Category</h2>
             {{ category }}
         </div>
+
         <div id="difficulty" class="container">
-            <h2 class="container-header">Difficulty</h2>
             {{ difficulty }}
         </div>
+
         <div id="description" class="container">
-            <h2 class="container-header">Description</h2>
             {{ description }}
         </div>
     </div>
