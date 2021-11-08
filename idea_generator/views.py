@@ -16,7 +16,7 @@ def index_view(request):
 
         context['name'] = idea.name
         context['category'] = idea.category.category
-        context['difficulty'] = idea.difficulty
+        context['difficulty'] = idea.difficulty.difficulty
         context['description'] = idea.description
 
     return render(request, 'main.html', context)
