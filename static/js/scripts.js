@@ -10,7 +10,8 @@ $(document).ready(function (){
 function resizeToFit(){
     var fontSize = $("#description").css("font-size");
     $("#description").css("font-size",parseFloat(fontSize) - 2);
-    if ($("#description").height() >= $("#output").height() - $(".container").height()){
+    console.log($("#description").height(),$("#output").height() - $(".container-header").height());
+    if ($("#description").height() >= $("#output").height() - $(".container-header").height()){
         resizeToFit();
     }
 }
