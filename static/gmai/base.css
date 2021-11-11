@@ -32,18 +32,17 @@ body {
     background-color: #CFDCF5;
 }
 
-.container-header{
+.container-header {
     float: left;
     width: 300px;
     height: 20px;
     text-align: center;
-    font-size:18px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .container {
     width: 300px;
-    height: auto;
     float: left;
     text-align: center;
 }
