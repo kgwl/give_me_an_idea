@@ -5,9 +5,15 @@ class Category(models.Model):
     id = models.AutoField(primary_key=True)
     category = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.category
+
 class Difficulties(models.Model):
     id = models.AutoField(primary_key=True)
     difficulty = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.difficulty
 
 class Idea(models.Model):
     id = models.AutoField(primary_key=True)

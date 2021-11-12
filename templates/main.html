@@ -29,8 +29,16 @@
         </div>
     </div>
     <div style="clear:both;"></div>
+    <div id="select">
+        <form action="" method="POST">
+            {% csrf_token %}
+             {{ category_form.as_p }}
+            {{ difficulty_form.as_p }}
+        </form>
+    </div>
     <div id="rand-btn">
-        <form action="" method="GET">
+        <form action="" method="POST">
+            {% csrf_token %}
             <input type="submit" id="btn" name="btn" value="Draw!" input>
         </form>
     </div>
