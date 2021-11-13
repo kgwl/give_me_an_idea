@@ -29,19 +29,20 @@
         </div>
     </div>
     <div style="clear:both;"></div>
-    <div id="select">
-        <form action="" method="POST">
-            {% csrf_token %}
-             {{ category_form.as_p }}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="select">
+            {{ category_form.as_p }}
+        </div>
+        <div class="select">
             {{ difficulty_form.as_p }}
-        </form>
-    </div>
-    <div id="rand-btn">
-        <form action="" method="POST">
-            {% csrf_token %}
+        </div>
+        <div style="clear:both;"></div>
+        <div id="rand-btn">
+
             <input type="submit" id="btn" name="btn" value="Draw!" input>
-        </form>
-    </div>
+        </div>
+    </form>
 
 {% endblock content %}
 

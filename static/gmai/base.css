@@ -70,3 +70,9 @@ body {
 #btn:active {
     background-color: #FFC19A;
 }
+
+.select{
+    float: left;
+    text-align: center;
+    width: 600px;
+}

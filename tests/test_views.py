@@ -1,8 +1,5 @@
 from django.test import TestCase,Client
 from django.urls import reverse
-from idea_generator.models import Idea,Category,Difficulties
-import json
-
 class TestViews(TestCase):
 
     def setUp(self):

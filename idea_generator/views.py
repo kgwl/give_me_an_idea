@@ -17,13 +17,11 @@ def index_view(request):
         'difficulty_form':''
     }
 
-    if select_category_from.is_valid():
-        context['category_form'] = select_category_from
-
-    if select_difficulty_form.is_valid():
-        context['difficulty_form'] = select_difficulty_form
+    context['category_form'] = select_category_from
+    context['difficulty_form'] = select_difficulty_form
 
     if request.method == 'POST':
+
         select_id = random.choice([i.id for i in Idea.objects.all()])
         idea = Idea.objects.get(id=select_id)
 
