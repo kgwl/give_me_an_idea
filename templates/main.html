@@ -1,48 +1,40 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 
-    <div id="output">
-
-        <div class="container-header">Name</div>
-        <div class="container-header">Category</div>
-        <div class="container-header">Difficulty</div>
-        <div class="container-header">Description</div>
-
-        <div style="clear:both;"></div>
-
-        <div id="name" class="container">
+    <div class="row">
+        <div id="name" class="col-sm-6 col-md-3">
+            <h1 class="output-header">Name</h1>
             {{ name }}
         </div>
-
-        <div id="category" class="container">
+        <div id="name" class="col-sm-6 col-md-3">
+            <h1 class="output-header">Category</h1>
             {{ category }}
         </div>
-
-        <div id="difficulty" class="container">
+        <div id="name" class="col-sm-6 col-md-3">
+            <h1 class="output-header">Difficulty</h1>
             {{ difficulty }}
         </div>
-
-        <div id="description" class="container">
+        <div id="name" class="col-sm-6 col-md-3">
+            <h1 class="output-header">Description</h1>
             {{ description }}
         </div>
     </div>
-    <div style="clear:both;"></div>
     <form action="" method="POST">
         {% csrf_token %}
-        <div class="select">
-            {{ category_form.as_p }}
-        </div>
-        <div class="select">
-            {{ difficulty_form.as_p }}
-        </div>
-        <div style="clear:both;"></div>
-        <div id="rand-btn">
-
-            <input type="submit" id="btn" name="btn" value="Draw!" input>
+        <div class="row">
+            <div class="col-sm-6 select">
+                {{ category_form.as_p }}
+            </div>
+            <div class="col-sm-6 select">
+                {{ difficulty_form.as_p }}
+            </div>
+            <div class="col-12 draw-btn">
+                <input type="submit" id="btn" name="btn" value="Draw!" input>
+            </div>
         </div>
     </form>
+
 
 {% endblock content %}
 
