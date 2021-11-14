@@ -1,8 +1,20 @@
-#page{
+#page {
     text-align: center;
 }
 
-#page-title{
-    font-size:70px;
+#page-title {
+    font-size: 70px;
     font-weight: 700;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.output-row{
+    min-height: 192px;
+}
+
+@media (max-width: 992px ) {
+    .output-row{
+        min-height: 10vw;
+    }
 }
