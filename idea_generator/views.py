@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Idea
 from .forms import SelectCategoryForm,SelectDifficultyForm
-from .sub import get_idea_list,recent_ideas
+from .sub import get_idea_list,recent_ideas,save_id,remove_repetitions
 import random
 
 
@@ -31,10 +31,18 @@ def index_view(request):
         if select_category_from.is_valid():
             category_val = int(select_category_from.cleaned_data['category'])
 
+
         ideas = get_idea_list(difficulty_val=difficulty_val,category_val=category_val)
 
+        ideas = remove_repetitions(ideas,request)
+        if len(ideas) == 0:
+            ideas = get_idea_list(difficulty_val=difficulty_val, category_val=category_val)
+
         select_id = random.choice(ideas)
+
         idea = Idea.objects.get(id=select_id)
+
+        save_id(request, idea)
 
         recent = recent_ideas(request, idea)
 
@@ -43,5 +51,7 @@ def index_view(request):
         context['difficulty'] = idea.difficulty.difficulty
         context['description'] = idea.description
         context['recent'] = recent
+
+        save_id(request, idea)
 
     return render(request, 'main.html', context)

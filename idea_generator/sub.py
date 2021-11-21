@@ -73,5 +73,23 @@ def recent_ideas(request,idea):
 
     return recent
 
+def save_id(request, idea):
+    idea_id = request.session.get('idea_id')
+    if idea_id is None:
+        idea_id = []
+    idea_id.append(idea.id)
+    request.session['idea_id'] = idea_id
+
+def remove_repetitions(ideas,request):
+    last = request.session.get('idea_id')
+    if last is not None:
+        last = list(dict.fromkeys(last))
+        for x in last:
+            if x in ideas:
+                ideas.remove(x)
+    return ideas
+
+
+
 
 
