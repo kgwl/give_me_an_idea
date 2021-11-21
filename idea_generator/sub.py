@@ -1,6 +1,5 @@
 from .models import Category, Difficulties, Idea
 
-
 def get_categories():
     categories_list = []
 
