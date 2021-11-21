@@ -66,7 +66,7 @@ def recent_ideas(request,idea):
     recent = request.session.get('recent')
     recent = [x['name'] for x in recent]
 
-    while len(recent) >= 5:
+    while len(recent) > 5:
         recent.remove(recent[0])
 
     recent.reverse()
