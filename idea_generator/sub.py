@@ -52,5 +52,26 @@ def get_idea_list(difficulty_val,category_val):
     return idea_list
 
 
+def recent_ideas(request,idea):
+    data = {}
+    data['name'] = idea.name
+    data['category'] = idea.category.category
+    data['difficulty'] = idea.difficulty.difficulty
+    data['description'] = idea.description
+    recent = request.session.get('recent')
+    if recent is None:
+        recent = []
+    recent.append(data)
+    request.session['recent'] = recent
+    recent = request.session.get('recent')
+    recent = [x['name'] for x in recent]
+
+    while len(recent) >= 5:
+        recent.remove(recent[0])
+
+    recent.reverse()
+
+    return recent
+
 
 

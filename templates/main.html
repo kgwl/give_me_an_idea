@@ -47,6 +47,9 @@
     <div class="row">
         <div class="col-12 recent">
             <h1> Recently drawn</h1>
+            {% for rec in recent %}
+                {{ rec }} <br>
+            {% endfor %}
         </div>
     </div>
 

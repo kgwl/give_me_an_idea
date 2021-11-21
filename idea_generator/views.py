@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from .models import Idea
 from .forms import SelectCategoryForm,SelectDifficultyForm
-from .sub import get_idea_list
+from .sub import get_idea_list,recent_ideas
 import random
 
-def index_view(request):
 
+def index_view(request):
     select_category_from = SelectCategoryForm(request.POST)
     select_difficulty_form = SelectDifficultyForm(request.POST)
 
@@ -15,7 +15,8 @@ def index_view(request):
         'difficulty': '',
         'description': '',
         'category_form':'',
-        'difficulty_form':''
+        'difficulty_form':'',
+        'recent':''
     }
 
     context['category_form'] = select_category_from
@@ -35,9 +36,12 @@ def index_view(request):
         select_id = random.choice(ideas)
         idea = Idea.objects.get(id=select_id)
 
+        recent = recent_ideas(request, idea)
+
         context['name'] = idea.name
         context['category'] = idea.category.category
         context['difficulty'] = idea.difficulty.difficulty
         context['description'] = idea.description
+        context['recent'] = recent
 
     return render(request, 'main.html', context)
