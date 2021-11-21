@@ -1,20 +1,91 @@
-#page {
+body {
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #354980;
 }
 
 #page-title {
-    font-size: 70px;
-    font-weight: 700;
-    margin-top: 45px;
+    font-size: 5rem;
+    font-weight: bold;
     margin-bottom: 45px;
 }
 
-.output-row{
-    min-height: 192px;
+.output-row {
+    min-height: 250px;
+    background-color: #E2F9FB;
+    border: 3px solid #CAF2F3;
+    border-radius: 10px;
+    box-shadow: 2px 2px 40px 2px #B9C7ED;
+}
+
+.output-header {
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.output {
+    font-size: 18px;
+}
+
+.select {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 30%;
+}
+
+.select-btn {
+    width: 40%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#sel-cat {
+    text-align: right;
+}
+
+#sel-dif {
+    text-align: left;
+}
+
+.choice-field {
+    all: initial;
+    all: unset;
+    cursor: pointer;
+    background-color: #DBD0F6;
+    width: 8rem;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #A08BD7;
+    box-shadow: inset 2px 2px 8px 2px #C8BAEE;
+}
+
+.choice-field:hover {
+    background-color: #ECE1F7;
+}
+
+.choice-field:active{
+    background-color: #C8BAEE;
+}
+
+#btn {
+    all: initial;
+    all: unset;
+    background-color: #CAF2F3;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+    border: 1px solid #96DADD;
+    box-shadow: inset 2px 2px 8px 2px #B0E7E9;
+}
+
+#btn:active{
+    background-color: #B0E7E9;
 }
 
 @media (max-width: 992px ) {
-    .output-row{
+    .output-row {
         min-height: 10vw;
     }
 }

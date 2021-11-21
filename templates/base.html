@@ -19,17 +19,22 @@
     <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <div id="page">
-        <div class="container">
+<div class="container">
+    <div class="row col-12 mb-5 mt-5">
         <header>
             <h1 id="page-title">Give me and idea!</h1>
         </header>
-            {% block content %}
-
-            {% endblock content %}
-        </div>
     </div>
+    {% block content %}
+
+    {% endblock content %}
+</div>
 </body>
 </html>
