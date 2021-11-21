@@ -2,6 +2,7 @@ body {
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: #354980;
+    background-color: #E5EBFB;
 }
 
 #page-title {
@@ -84,8 +85,30 @@ body {
     background-color: #B0E7E9;
 }
 
+.recent{
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    min-height: 200px;
+    border: 1px solid #8A9ED5;
+    border-radius: 5px;
+    box-shadow: 2px 2px 40px 2px #B9C7ED;
+}
+
 @media (max-width: 992px ) {
     .output-row {
         min-height: 10vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .recent{
+        width: 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .recent{
+        width: 70%;
     }
 }
