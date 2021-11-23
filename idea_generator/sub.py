@@ -63,6 +63,7 @@ def recent_ideas(request,idea):
     recent.append(data)
     request.session['recent'] = recent
     recent = request.session.get('recent')
+
     recent = [x['name'] for x in recent]
 
     while len(recent) > 5:
@@ -78,6 +79,7 @@ def save_id(request, idea):
         idea_id = []
     idea_id.append(idea.id)
     request.session['idea_id'] = idea_id
+    request.session.save()
 
 def remove_repetitions(ideas,request):
     last = request.session.get('idea_id')
