@@ -20,4 +20,4 @@ class Idea(models.Model):
     name = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     difficulty = models.ForeignKey(Difficulties,on_delete=models.PROTECT)
-    description = models.TextField(max_length=500) #TODO: Change max_length of description to 200
+    description = models.TextField(max_length=200)
