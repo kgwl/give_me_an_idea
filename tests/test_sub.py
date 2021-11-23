@@ -77,7 +77,6 @@ class TestSub(TestCase):
             difficulty=self.difficulty,
             description='123'
         )
-
         save_id(self.request_factory,idea1)
         save_id(self.request_factory,idea1)
         ideas = self.request_factory.session.get('idea_id')
