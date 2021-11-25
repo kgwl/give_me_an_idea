@@ -49,8 +49,6 @@ body {
 }
 
 .choice-field {
-    all: initial;
-    all: unset;
     cursor: pointer;
     background-color: #DBD0F6;
     width: 8rem;
@@ -60,6 +58,8 @@ body {
     text-align: center;
     border: 1px solid #A08BD7;
     box-shadow: inset 2px 2px 8px 2px #C8BAEE;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .choice-field:hover {
@@ -68,6 +68,10 @@ body {
 
 .choice-field:active{
     background-color: #C8BAEE;
+}
+
+.choice-field:focus{
+    outline: none;
 }
 
 #btn {
