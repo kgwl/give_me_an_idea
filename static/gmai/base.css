@@ -1,5 +1,6 @@
 html {
-    height: 100%;
+    width: 100%;
+    height: ;
 }
 
 body {
@@ -148,11 +149,13 @@ body {
     color: #2f6dce;
 }
 
+
 @media (max-width: 992px ) {
     .outbar {
         min-height: 15vw;
     }
 }
+
 
 @media (max-width: 768px) {
     .recent {

@@ -1,0 +1,17 @@
+<div id="cover"></div>
+
+<div class="col-12" id="popup">
+    <div class="row">
+        <div class="col-12" id="exit-btn"><input type="submit" id="exit" name="exit" value="X" input></div>
+
+        <h1 class="col-12">Start working!</h1>
+        <h2 class="col-12">Your recet projects are..</h2>
+
+        <h3 class="col-6 pop-header">Name</h3>
+        <h3 class="col-6 pop-header">Description</h3>
+        {% for rec in recent %}
+            <div class="col-6 pop-recent"> {{ rec.0 }}</div>
+            <div class="col-6 pop-recent"> {{ rec.1 }}</div>
+        {% endfor %}
+    </div>
+</div>

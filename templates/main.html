@@ -55,10 +55,10 @@
     <div class="row">
         <div class="col-12 recent">
             <h1> Recently drawn</h1>
-                {% for rec in recent %}
-                    <div class="recent-element" data-tooltip="{{ rec.1 }}">{{ rec.0 }}</div>
-                {% endfor %}
-            </div>
+            {% for rec in recent %}
+                <div class="recent-element" data-tooltip="{{ rec.1 }}">{{ rec.0 }}</div>
+            {% endfor %}
+        </div>
     </div>
     <div class="row">
         <div class="col-12 footer">
@@ -67,4 +67,3 @@
     </div>
 
 {% endblock content %}
-
