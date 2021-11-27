@@ -67,7 +67,7 @@ class TestSub(TestCase):
         self.assertEqual(idea_id,self.idea.id)
 
     def test_recent_ideas(self):
-        idea_name = recent_ideas(self.request_factory,self.idea)[0]
+        idea_name = recent_ideas(self.request_factory,self.idea)[0][0]
         self.assertEqual(idea_name,self.idea.name)
 
     def test_remove_repetitions(self):

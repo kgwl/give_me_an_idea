@@ -64,7 +64,7 @@ def recent_ideas(request,idea):
     request.session['recent'] = recent
     recent = request.session.get('recent')
 
-    recent = [x['name'] for x in recent]
+    recent = [(x['name'],x['description']) for x in recent]
 
     while len(recent) > 5:
         recent.remove(recent[0])

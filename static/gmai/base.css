@@ -108,6 +108,31 @@ body {
     border: 1px solid #2f6dce;
     border-radius: 5px;
     box-shadow: 2px 2px 40px 2px #cccccc;
+    text-align: center;
+}
+
+.recent-element {
+    cursor: pointer;
+    margin: auto;
+    width: fit-content;
+}
+
+.recent-element::before {
+    content: attr(data-tooltip);
+    max-width: 20%;
+    position: absolute;
+    font-size: 18px;
+    background-color: rgba(21, 101, 192, 70%);
+    color: #ffffff;
+    padding: 2px;
+    border-radius: 5px;
+    left: 52%;
+    clip-path: circle(0rem at center);
+    overflow: hidden;
+}
+
+.recent-element:hover::before {
+    clip-path: circle(30rem at center);
 }
 
 .icon-github-circled {
@@ -132,6 +157,10 @@ body {
 @media (max-width: 768px) {
     .recent {
         width: 60%;
+    }
+
+    .recent-element::before {
+        max-width: 50%;
     }
 }
 
