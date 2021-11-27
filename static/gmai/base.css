@@ -5,6 +5,11 @@ body {
     color: #000000;
 }
 
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 #page-title {
     font-size: 5rem;
     font-weight: bold;
