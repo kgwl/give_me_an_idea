@@ -1,8 +1,8 @@
 body {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    color: #354980;
-    background-color: #E5EBFB;
+    background-color: #e3f2fd;
+    color: #000000;
 }
 
 #page-title {
@@ -13,19 +13,29 @@ body {
 
 .output-row {
     min-height: 250px;
-    background-color: #E2F9FB;
-    border: 3px solid #CAF2F3;
+    /*border: 3px solid #1565c0;*/
+    /*border-radius: 10px;*/
+    /*box-shadow: 2px 2px 40px 2px #003c8f;*/
+}
+
+.outbar {
+    font-size: 18px;
+    background-color: #ffffff;
+    min-height: 250px;
+    border: 3px solid #1565c0;
     border-radius: 10px;
-    box-shadow: 2px 2px 40px 2px #B9C7ED;
+    box-shadow: 2px 2px 40px 2px #003c8f;
+    padding:0;
 }
 
 .output-header {
     font-weight: bold;
-    border-radius: 5px;
-}
-
-.output {
-    font-size: 18px;
+    background-color: #1565c0;
+    color:#ffffff;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .select {
@@ -66,11 +76,11 @@ body {
     background-color: #ECE1F7;
 }
 
-.choice-field:active{
+.choice-field:active {
     background-color: #C8BAEE;
 }
 
-.choice-field:focus{
+.choice-field:focus {
     outline: none;
 }
 
@@ -85,11 +95,11 @@ body {
     box-shadow: inset 2px 2px 8px 2px #B0E7E9;
 }
 
-#btn:active{
+#btn:active {
     background-color: #B0E7E9;
 }
 
-.recent{
+.recent {
     background-color: white;
     width: 50%;
     margin: auto;
@@ -99,33 +109,36 @@ body {
     box-shadow: 2px 2px 40px 2px #B9C7ED;
 }
 
-.icon-github-circled{
+.icon-github-circled {
     font-size: 50px;
     color: #354980;
 }
 
-.icon-github-circled:hover{
-    color:#798DC4;
+.icon-github-circled:hover {
+    color: #798DC4;
 }
 
-.icon-github-circled:visited{
+.icon-github-circled:visited {
     color: #354980;
 }
 
 @media (max-width: 992px ) {
-    .output-row {
-        min-height: 10vw;
+    .outbar {
+        min-height: 15vw;
     }
 }
 
 @media (max-width: 768px) {
-    .recent{
+    .recent {
         width: 60%;
     }
 }
 
 @media (max-width: 576px) {
-    .recent{
+    .recent {
         width: 70%;
+    }
+    .outbar {
+        min-height: 20vw;
     }
 }

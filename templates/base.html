@@ -30,21 +30,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
 
-     {% load cookielaw_tags %}
-     {% cookielaw_banner %}
+    {% load cookielaw_tags %}
+    {% cookielaw_banner %}
 
 </head>
 <body>
+    <div class="container">
+        <div class="row col-12 mb-5 mt-5">
+            <header>
+                <h1 id="page-title">Give me and idea!</h1>
+            </header>
+        </div>
+        {% block content %}
 
-<div class="container">
-    <div class="row col-12 mb-5 mt-5">
-        <header>
-            <h1 id="page-title">Give me and idea!</h1>
-        </header>
+        {% endblock content %}
     </div>
-    {% block content %}
-
-    {% endblock content %}
-</div>
 </body>
 </html>
