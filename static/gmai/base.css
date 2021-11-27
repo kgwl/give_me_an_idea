@@ -1,11 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    background-color: #e3f2fd;
-    color: #000000;
+    background-color: #ffffff;
 }
 
-.row{
+.row {
     margin-left: 0;
     margin-right: 0;
 }
@@ -18,25 +21,22 @@ body {
 
 .output-row {
     min-height: 250px;
-    /*border: 3px solid #1565c0;*/
-    /*border-radius: 10px;*/
-    /*box-shadow: 2px 2px 40px 2px #003c8f;*/
 }
 
 .outbar {
     font-size: 18px;
-    background-color: #ffffff;
     min-height: 250px;
-    border: 3px solid #1565c0;
+    border: 3px solid #2f6dce;
     border-radius: 10px;
-    box-shadow: 2px 2px 40px 2px #003c8f;
-    padding:0;
+    box-shadow: 2px 2px 40px 2px #cccccc;
+    padding: 0;
+    background-color: #ffffff;
 }
 
 .output-header {
     font-weight: bold;
-    background-color: #1565c0;
-    color:#ffffff;
+    background-color: #2f6dce;
+    color: #ffffff;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -64,25 +64,21 @@ body {
 }
 
 .choice-field {
+    background-color: #2f6dce;
+    color: #ffffff;
     cursor: pointer;
-    background-color: #DBD0F6;
     width: 8rem;
     height: 3rem;
     margin: 0;
     padding: 0;
     text-align: center;
-    border: 1px solid #A08BD7;
-    box-shadow: inset 2px 2px 8px 2px #C8BAEE;
+    border: 1px solid #2f6dce;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
 .choice-field:hover {
-    background-color: #ECE1F7;
-}
-
-.choice-field:active {
-    background-color: #C8BAEE;
+    background-color: #6d9bff;
 }
 
 .choice-field:focus {
@@ -92,39 +88,39 @@ body {
 #btn {
     all: initial;
     all: unset;
-    background-color: #CAF2F3;
+    background-color: #2f6dce;
+    color: #ffffff;
     width: 8rem;
     height: 3rem;
     cursor: pointer;
-    border: 1px solid #96DADD;
-    box-shadow: inset 2px 2px 8px 2px #B0E7E9;
+    border: 1px solid;
 }
 
 #btn:active {
-    background-color: #B0E7E9;
+    background-color: #00439c;
 }
 
 .recent {
-    background-color: white;
+    background-color: #ffffff;
     width: 50%;
     margin: auto;
     min-height: 200px;
-    border: 1px solid #8A9ED5;
+    border: 1px solid #2f6dce;
     border-radius: 5px;
-    box-shadow: 2px 2px 40px 2px #B9C7ED;
+    box-shadow: 2px 2px 40px 2px #cccccc;
 }
 
 .icon-github-circled {
     font-size: 50px;
-    color: #354980;
+    color: #2f6dce;
 }
 
 .icon-github-circled:hover {
-    color: #798DC4;
+    color: #6d9bff;
 }
 
 .icon-github-circled:visited {
-    color: #354980;
+    color: #2f6dce;
 }
 
 @media (max-width: 992px ) {
@@ -143,6 +139,7 @@ body {
     .recent {
         width: 70%;
     }
+
     .outbar {
         min-height: 20vw;
     }
