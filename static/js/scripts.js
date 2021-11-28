@@ -1,5 +1,6 @@
 $(document).ready(function () {
     paddingToFit();
+    showPopup();
 
     $("#exit").click(function () {
         exitPopup();
@@ -43,4 +44,11 @@ function switchHeight(value) {
 function exitPopup() {
     var item = $("#popup-content");
     item.css('display', 'none');
+}
+
+function showPopup(){
+    var item = $("#popup-content");
+    if (clicks == 50 || clicks == 150 || clicks == 300){
+        item.css('display', 'block');
+    }
 }
