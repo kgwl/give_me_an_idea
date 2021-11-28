@@ -1,6 +1,6 @@
 from django.test import TestCase,RequestFactory
 from idea_generator.models import Idea,Difficulties,Category
-from idea_generator.sub import get_categories,get_difficulties,get_idea_list,save_id,recent_ideas,remove_repetitions
+from idea_generator.sub import get_categories,get_difficulties,get_idea_list,save_id,recent_ideas,remove_repetitions,click_counter,get_clicks
 
 from django.contrib.sessions.middleware import SessionMiddleware
 
@@ -83,6 +83,14 @@ class TestSub(TestCase):
         ideas_without_repetitions = remove_repetitions(ideas,self.request_factory)
         self.assertEqual(len(ideas_without_repetitions),1)
         self.assertEqual(ideas[0],ideas_without_repetitions[0])
+
+    def test_click_counter(self):
+        request = RequestFactory().get('clicks')
+        middleware = SessionMiddleware()
+        middleware.process_request(request)
+        click_counter(request)
+        clicks = get_clicks(request)
+        self.assertEqual(clicks,1)
 
 
 

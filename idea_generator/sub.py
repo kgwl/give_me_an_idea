@@ -90,7 +90,15 @@ def remove_repetitions(ideas,request):
                 ideas.remove(x)
     return ideas
 
+def click_counter(request):
+    clicks = request.session.get('clicks')
+    if clicks is None:
+        clicks = 0
+    clicks = clicks + 1
+    request.session['clicks'] = clicks
+    request.session.save()
 
-
+def get_clicks(request):
+    return request.session.get('clicks')
 
 

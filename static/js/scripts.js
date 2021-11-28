@@ -1,9 +1,10 @@
 $(document).ready(function () {
     paddingToFit();
 
-    $("#exit").click(function (){
+    $("#exit").click(function () {
         exitPopup();
     });
+
 });
 
 $(window).resize(function () {
@@ -39,8 +40,7 @@ function switchHeight(value) {
     }
 }
 
-function exitPopup(){
+function exitPopup() {
     var item = $("#popup-content");
-    item.css('display','none');
+    item.css('display', 'none');
 }
-

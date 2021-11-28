@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Idea
 from .forms import SelectCategoryForm,SelectDifficultyForm
-from .sub import get_idea_list,recent_ideas,save_id,remove_repetitions
+from .sub import get_idea_list,recent_ideas,save_id,remove_repetitions,click_counter,get_clicks
 import random
 
 
@@ -46,11 +46,15 @@ def index_view(request):
 
         recent = recent_ideas(request, idea)
 
+        click_counter(request)
+        clicks = get_clicks(request)
+
         context['name'] = idea.name
         context['category'] = idea.category.category
         context['difficulty'] = idea.difficulty.difficulty
         context['description'] = idea.description
         context['recent'] = recent
+        context['clicks'] = clicks
 
         save_id(request, idea)
 
