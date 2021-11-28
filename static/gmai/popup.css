@@ -1,3 +1,7 @@
+#popup-content{
+    display: none;
+}
+
 #cover {
     position: fixed;
     width: 100%;

@@ -1,10 +1,15 @@
 $(document).ready(function () {
     paddingToFit();
-})
+
+    $("#exit").click(function (){
+        exitPopup();
+    });
+});
 
 $(window).resize(function () {
     paddingToFit();
 })
+
 
 function paddingToFit() {
     var windowWidth = $(window).width();
@@ -33,3 +38,9 @@ function switchHeight(value) {
         item.css("margin-top", itemHeight);
     }
 }
+
+function exitPopup(){
+    var item = $("#popup-content");
+    item.css('display','none');
+}
+

@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'gmai/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gmai/base.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gmai/popup.css' %}">
+
     <link rel="stylesheet" type="text/css" href="{% static 'fontello/css/fontello.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'cookielaw/css/cookielaw.css' %}">
 
@@ -47,6 +48,11 @@
     {% block content %}
 
     {% endblock content %}
+
+    <div id="popup-content">
+        {% include 'popup.html' %}
+    </div>
+
 
 </div>
 </body>
