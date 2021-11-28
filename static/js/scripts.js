@@ -12,7 +12,6 @@ $(window).resize(function () {
     paddingToFit();
 })
 
-
 function paddingToFit() {
     var windowWidth = $(window).width();
 

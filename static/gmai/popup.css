@@ -64,6 +64,7 @@ cover.h2 {
     border: 1px solid;
     text-align: center;
     border-radius: 20px;
+    margin-top: 10px;
 }
 
 #exit:active {
