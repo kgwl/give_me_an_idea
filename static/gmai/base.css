@@ -96,6 +96,11 @@ body {
     border: 1px solid;
 }
 
+#btn:hover{
+    background-color: #6d9bff;
+}
+
+
 #btn:active {
     background-color: #00439c;
 }
