@@ -53,8 +53,13 @@
         {% include 'popup.html' %}
     </div>
 
+    <div id="message-content">
+        {% include 'empty_message.html' %}
+    </div>
+
     <script type="text/javascript">
         var clicks = "{{clicks}}";
+        var is_empty = "{{ is_empty }}";
     </script>
 
 </div>

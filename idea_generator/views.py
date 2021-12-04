@@ -16,7 +16,8 @@ def index_view(request):
         'description': '',
         'category_form':'',
         'difficulty_form':'',
-        'recent':''
+        'recent':'',
+        'is_empty': 0
     }
 
     context['category_form'] = select_category_from
@@ -38,24 +39,26 @@ def index_view(request):
         if len(ideas) == 0:
             ideas = get_idea_list(difficulty_val=difficulty_val, category_val=category_val)
 
-        select_id = random.choice(ideas)
+        if len(ideas) != 0:
+            select_id = random.choice(ideas)
 
-        idea = Idea.objects.get(id=select_id)
+            idea = Idea.objects.get(id=select_id)
 
-        save_id(request, idea)
+            save_id(request, idea)
 
-        recent = recent_ideas(request, idea)
+            recent = recent_ideas(request, idea)
 
-        click_counter(request)
-        clicks = get_clicks(request)
+            click_counter(request)
+            clicks = get_clicks(request)
 
-        context['name'] = idea.name
-        context['category'] = idea.category.category
-        context['difficulty'] = idea.difficulty.difficulty
-        context['description'] = idea.description
-        context['recent'] = recent
-        context['clicks'] = clicks
+            context['name'] = idea.name
+            context['category'] = idea.category.category
+            context['difficulty'] = idea.difficulty.difficulty
+            context['description'] = idea.description
+            context['recent'] = recent
+            context['clicks'] = clicks
 
-        save_id(request, idea)
-
+            save_id(request, idea)
+        else:
+            context['is_empty'] = 1
     return render(request, 'main.html', context)
