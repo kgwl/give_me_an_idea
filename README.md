@@ -17,6 +17,6 @@ The app is available at 127.0.0.1:8000
 ## Used technology
 - Python 3.8.10
 - Django 3.2.8
+- django-cookie-law 
 - Bootstrap 5.1.3
 - jQuery 3.6.0
-- django-cookie-law 
