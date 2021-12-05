@@ -17,3 +17,4 @@ The app is available at 127.0.0.1:8000
 - Django 3.2.8
 - Bootstrap 5.1.3
 - jQuery 3.6.0
+- django-cookie-law 
