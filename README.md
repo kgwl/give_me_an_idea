@@ -8,6 +8,8 @@ To run program on localhost use following commands:
 
 `cd your/path/to/project`
 
+` pip install -r requiments.txt`
+
 `python manage.py runserver`
 
 The app is available at 127.0.0.1:8000 
