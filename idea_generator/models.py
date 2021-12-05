@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    Stores a categories for Idea model.
+    """
     id = models.AutoField(primary_key=True)
     category = models.CharField(max_length=200)
 
@@ -9,6 +12,9 @@ class Category(models.Model):
         return self.category
 
 class Difficulties(models.Model):
+    """
+    Stores difficulty levels for Idea model.
+    """
     id = models.AutoField(primary_key=True)
     difficulty = models.CharField(max_length=100)
 
@@ -16,6 +22,9 @@ class Difficulties(models.Model):
         return self.difficulty
 
 class Idea(models.Model):
+    """
+    Stores programming project ideas.
+    """
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
