@@ -10,6 +10,8 @@ To run program on localhost use following commands:
 
 `python manage.py runserver`
 
+The app is available at 127.0.0.1:8000 
+
 ## Used technology
 - Python 3.8.10
 - Django 3.2.8
